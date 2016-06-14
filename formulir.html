@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Print Tiket</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
+ <style>
+	.row {
+		margin-top:10px;
+		margin-left:2px;
+	}
+	.row2 {
+		margin-top:10px;
+		margin-left:2px;
+	}
+	.col-lg-6 {
+		padding:1px;
+	}
+	.tab1 {
+		background-image:url("d.jpg");
+		background-size: 1350px 643px;
+		
+		background-position:center;
+		border-radius:5px;
+	}
+	
+	.tabel1 {
+		margin:auto;
+		margin-bottom:10px;
+	}
+  </style>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="tab1">
+		  
+            <table class="tabel1">
+			<tr>
+			<td>
+            <table class="table table-bordered " style="width:450px; height:600px; ">
+			<thead>
+			</thead>
+			<tbody>
+			<tr>
+			<td colspan="2"><h3 style="text-align:center;" >CINEMA XXI</h3></td>
+			</tr>
+			
+			<tr>
+			<td><br>Judul Film</td>  <td><br><input type="text" name="nama" ng-model="judul"></td>
+			</tr>
+			<tr>
+			<td><br>Jumlah Tiket </td>  <td><br><input type="text" name="nama" ng-model="jumlah"></td>
+			</tr>
+			
+			<tr>
+			<td><br>Jam</td>  <td><br>
+			<select name="n7" id="n7" size=1 ng-model="jam">
+			<option value="13.00"> 13.00 </option>
+			<option value="15.00"> 15.00 </option>
+			<option value="17.00"> 17.00 </option>
+			<option value="19.00"> 19.00 </option>
+			<option value="21.00"> 21.00 </option>
+			
+			</tr>
+			
+			<tr>
+			<td><br>Deretan / Kursi </td>  <td><br>
+			<select name="n7" id="n7" size=1 ng-model="deret">
+			<option value="A"> A </option>
+			<option value="B"> B</option>
+			<option value="C"> C</option>
+			<option value="D"> D </option>
+			<option value="E"> E</option>
+			<option value="F"> F</option>
+			<option value="G"> G </option>
+			<option value="H"> H</option>
+			<option value="I"> I</option>
+			<input type="text" name="nama" style="width:80px" placeholder="1A" ng-model="kursi"></td>
+			</tr>
+			</tbody>
+			</table> 
+			</td>
+			</tr>
+			<tr>
+			<td>
+			
+			 <button onclick="myFunction()">Print tiket</button></td>
+			 </tr>
+			</table>
+	 <b> <div class="row2">
+		<div class="col-lg-6">
+          <div class="tab1" id="tab11" ng-show="showMe">
+		  <br>
+            <table class="tabel11">
+			<tr>
+			<td><h3 style="text-align:center;" >CINEMA XXI</h3></td>
+			</tr>
+			<tr>
+			<td>Judul Film <td> : <td>{{judul}}</td>
+			</tr>
+			<tr>
+			<td>Jumlah Tiket<td> : <td>{{jumlah}}</td>
+			</tr>
+			<tr>
+			<td>Jam <td> : <td>{{jam}}</td>
+			</tr>
+			
+			<td>Deretan / Kursi <td> : <td>
+			{{deret}} : 
+			{{kursi}}</td>
+			</tr>
+			<tr>
+			<td>Harga <td> : <td>Rp {{jumlah*30000}} ,00</td>
+			</tr>
+			</table> 
+			<br>
+			<br>
+          </div>
+        </div>
+		
+	  <script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.showMe = false;
+    
+	
+});
+function myFunction() {
+	var printContent = document.getElementById("tab11").innerHTML;
+	var restorepage = document.body.innerHTML;
+	document.body.innerHTML = printContent;
+	window.print();
+	document.body.innerHTML = restorepage;
+}
+
+</script>
+
+</body>
+</html>

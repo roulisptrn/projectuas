@@ -1,0 +1,96 @@
+header {
+	width:1350px;
+	background:url("d.jpg")right;
+	height:643px;
+}
+body {
+background-color:#FFFFFF;
+width:1320px;
+}
+
+#page-top{
+	margin:0px;
+	
+	
+}
+
+a {
+  background-color: transparent;
+  color:#ffffff;
+  }
+a:active,
+a:hover {
+  outline: 0;
+}
+
+#middle {
+color:#D2527F;
+font-size:28px;
+font-family:verdana;
+text-align:center;
+padding-top:250px;
+padding-left:0px;
+padding-right:600px;
+}
+
+
+#myNavbar {
+	font-family:Baskerville Old Face;
+	font-size:16px;
+	width:97%;
+}
+
+#content {
+	height:400px;
+	font-family:Blackadder ITC;
+	font-size:20px;
+}
+#garis {
+	background-color:black;
+	height:1px;
+	width:40%;
+}
+#garistp {
+	height:1px;
+	background-color:gray;
+	width:20%;
+}
+
+footer {
+	background-color:#e74c3c;
+	width:1349px;
+	height:650px;
+}
+#slide-3 {
+	background-color:black;
+	color:white;
+	font-family:Baskerville Old Face;
+	font-size:25px;
+	height:650px;
+	width:1349px;
+}
+#slide-4 {
+	color:black;
+	font-size:20px;
+	font-family:Baskerville Old Face;
+	text-align:center;
+	padding-top:90px;
+	
+}
+	
+#home-row-3 {
+		font-size: 25px;
+		font-family:Baskerville Old Face;
+		background-color:#ffffff
+	}
+#home-row-3 .home-hover {
+		overflow: hidden;
+		padding-top: 26px;
+		transition: all ease-in .5s;
+		height:200px;
+		width:300px
+	}
+	
+	
+	
+	
