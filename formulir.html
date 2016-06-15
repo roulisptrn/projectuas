@@ -9,6 +9,14 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> 
  <style>
+ 	#for {
+	margin-left: 400px;
+	}
+	.body {
+            background-image : url("img/bg.jpeg");
+            background-image : repeat;
+			background-color : #ffffff;
+    	}
 	.row {
 		margin-top:10px;
 		margin-left:2px;
@@ -138,6 +146,14 @@ function myFunction() {
 	window.print();
 	document.body.innerHTML = restorepage;
 }
+$("div").click(function() {
+			$("#for").animate({
+				width: "500px",
+				height: "700px",
+				marginLeft: "4.8in",
+				borderWidth: "4px"
+			}, 1500 );
+		});
 
 </script>
 
